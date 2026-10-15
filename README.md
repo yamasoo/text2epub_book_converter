@@ -36,12 +36,11 @@ python tests/test_logic.py
 xvfb-run -a python tests/test_gui_smoke.py     # GUI；Windows/macOS 直接 python 執行即可
 ```
 
-## 打包成 exe（Windows，未經實機驗證）
+## 打包成 exe（Windows）
 ```
 pip install pyinstaller
-pyinstaller --noconsole --onefile --name BookConverter ^
-  --collect-data opencc --collect-all tkinterdnd2 ^
-  --add-data "assets;assets" main.py
+pyinstaller --noconsole --onefile --name BookConverter --collect-data opencc --collect-all tkinterdnd2 --add-data "assets;assets" main.py
+
 ```
 - macOS / Linux 的 `--add-data` 分隔符是 `:`（`assets:assets`）。
 - 若啟動後簡繁轉換報找不到字典，請確認 `--collect-data opencc` 有生效。
