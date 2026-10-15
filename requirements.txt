@@ -1,0 +1,6 @@
+opencc-python-reimplemented>=0.1.7
+charset-normalizer>=3.0
+beautifulsoup4>=4.12
+Pillow>=10.0
+# 以下為後續步驟使用
+tkinterdnd2>=0.3   # 選配：拖放支援，沒裝也能用按鈕選檔
